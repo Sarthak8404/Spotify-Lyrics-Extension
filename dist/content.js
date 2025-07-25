@@ -1,0 +1,1 @@
+console.log("Spotify Lyrics Extension content script loaded");let e="";const n=()=>{const t=document.querySelector('[data-testid="context-item-info-title"] a')?.textContent?.trim()||"";t&&t!==e&&(e=t,chrome.runtime.sendMessage({action:"songChanged",song:t}))};setInterval(n,5e3);
